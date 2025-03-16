@@ -3,6 +3,6 @@ import { predictSkinCancer } from '../controllers/predictController';
 
 const router = Router();
 
-router.post('/', predictSkinCancer);
+router.post('/skin', predictSkinCancer);
 
 export default router;
