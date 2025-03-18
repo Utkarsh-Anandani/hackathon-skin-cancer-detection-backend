@@ -12,7 +12,7 @@ export const predictSkinCancer = async (
 ): Promise<void> => {
   try {
     const { part, description, phoneNumber } = req.body;
-    const phone = phoneNumber.substring(3);
+    const phone = phoneNumber;
 
     if (!req.file) {
       res.status(400).json({ success: false, message: "File not received!" });

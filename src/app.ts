@@ -3,6 +3,7 @@ import cors from "cors";
 import predictRoutes from "./routes/predictRoutes";
 import profileRoutes from "./routes/profileRoutes";
 import reportRoutes from "./routes/reportRoutes";
+import chatRoutes from "./routes/chatRoutes";
 import "dotenv/config";
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(cors());
 app.use("/api/profile", profileRoutes);
 app.use("/api/predict", predictRoutes);
 app.use("/api/report", reportRoutes);
+app.use("/api/chat", chatRoutes);
 
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
